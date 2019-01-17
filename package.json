@@ -1,0 +1,32 @@
+{
+  "name": "start-concurrently",
+  "version": "1.0.0",
+  "description": "Start multiple npm scripts concurrently",
+  "main": "start.js",
+  "bin": {
+    "start-concurrently": "./start.js"
+  },
+  "scripts": {
+    "start": "echo xxl",
+    "preversion": "[ -f ~/.npmrc.token.profiprog ] && cat ~/.npmrc.token.profiprog > ~/.npmrc; [ \"$(npm whoami)\" == \"profiprog\" ]",
+    "version": "npm publish --access=public",
+    "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/profiprog/start-concurrently.git"
+  },
+  "keywords": [
+    "npm",
+    "concurrently"
+  ],
+  "author": "profiprog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/profiprog/start-concurrently/issues"
+  },
+  "homepage": "https://github.com/profiprog/start-concurrently#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
